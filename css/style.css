@@ -1,0 +1,508 @@
+/* ==========================================================================
+   PANDU'S BIRTHDAY CELEBRATION - CLEAN, ROMANTIC & HIGH AESTHETICS
+   Fast, 0% CPU, Silky Smooth, Dazzling Night Wallpaper Background
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Great+Vibes&family=Montserrat:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+  --bg-deep: #060713;
+  --bg-card: rgba(14, 16, 32, 0.78);
+  --border-gold: rgba(255, 215, 120, 0.35);
+  --border-gold-glow: rgba(255, 195, 80, 0.75);
+  
+  --gold-primary: #ffd166;
+  --gold-glow: #ffb703;
+  --gold-bright: #fff275;
+  --rose-primary: #ff4d6d;
+  --rose-glow: #ff758f;
+  --rose-soft: #ffb3c1;
+  --text-main: #f8f9fa;
+  --text-muted: #d0d3de;
+  --text-gold: #ffe6a7;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-royal: 'Cinzel', serif;
+  --font-modern: 'Montserrat', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --shadow-card: 0 16px 40px rgba(0, 0, 0, 0.75);
+  --shadow-glow: 0 0 25px rgba(255, 183, 3, 0.45);
+  
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-full: 9999px;
+  
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Static Fireworks Wallpaper Background (Zero Lag, 60+ FPS) */
+.static-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    linear-gradient(to bottom, rgba(6, 7, 19, 0.45) 0%, rgba(6, 7, 19, 0.75) 65%, rgba(6, 7, 19, 0.95) 100%),
+    url('../assets/images/bg-wallpaper.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transform: translateZ(0);
+}
+
+/* App Container */
+.app-wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* Sticky Music & Header Bar */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.6rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
+  transition: var(--transition);
+}
+
+.top-nav:hover {
+  border-color: var(--border-gold-glow);
+  box-shadow: var(--shadow-glow);
+}
+
+.brand-tag {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--gold-primary);
+  text-shadow: 0 0 15px rgba(255, 209, 102, 0.6);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.music-quick-btn {
+  background: linear-gradient(135deg, var(--gold-glow), var(--rose-primary));
+  color: #fff;
+  border: none;
+  padding: 0.55rem 1.35rem;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 0 18px rgba(255, 183, 3, 0.5);
+  transition: var(--transition);
+}
+
+.music-quick-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 77, 109, 0.8);
+}
+
+.music-quick-btn.playing {
+  animation: pulseGold 2s infinite;
+}
+
+/* ==========================================================================
+   HERO BANNER SECTION
+   ========================================================================== */
+
+.hero-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+/* Redesigned Royal & Crisp "PANDU" Typography */
+.name-highlight {
+  font-family: var(--font-royal);
+  font-weight: 900;
+  font-size: clamp(3rem, 8.5vw, 6rem);
+  letter-spacing: 0.08em;
+  display: inline-block;
+  background: linear-gradient(135deg, #ffffff 0%, #ffeaa7 25%, #ffd166 50%, #ff758f 75%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 35px rgba(255, 209, 102, 0.7);
+  padding: 0 0.4rem;
+  text-transform: uppercase;
+  margin-left: 0.25rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 300;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 1rem auto 0;
+  line-height: 1.6;
+}
+
+.hero-subtitle span.phuljhadi-highlight {
+  color: var(--gold-bright);
+  font-weight: 600;
+  font-family: var(--font-serif);
+  font-style: italic;
+  text-shadow: 0 0 15px rgba(255, 209, 102, 0.85);
+  display: inline-block;
+  margin-top: 0.35rem;
+}
+
+/* ==========================================================================
+   POLAROID MEMORY CARDS (SONG LYRIC TAGS)
+   ========================================================================== */
+
+.memories-section {
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2.5rem;
+  perspective: 1000px;
+}
+
+.polaroid-card {
+  background: #ffffff;
+  padding: 1rem 1rem 1.75rem;
+  border-radius: 6px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+
+.polaroid-card:nth-child(1) { transform: rotate(-2deg); }
+.polaroid-card:nth-child(2) { transform: rotate(1.8deg); }
+.polaroid-card:nth-child(3) { transform: rotate(-1.5deg); }
+
+.polaroid-card:hover {
+  transform: translateY(-10px) rotate(0deg) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.85), 0 0 25px rgba(255, 209, 102, 0.5);
+  z-index: 10;
+}
+
+.tape-strip {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.7);
+  border-left: 2px dashed rgba(0, 0, 0, 0.1);
+  border-right: 2px dashed rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.polaroid-image-frame {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #151515;
+}
+
+.polaroid-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.5s ease;
+}
+
+.polaroid-card:hover .polaroid-image-frame img {
+  transform: scale(1.05);
+}
+
+.polaroid-caption {
+  margin-top: 1rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1a1a2e;
+  line-height: 1.35;
+  padding: 0 0.35rem;
+}
+
+.polaroid-sub {
+  font-family: var(--font-royal);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #6b6b80;
+  letter-spacing: 0.12em;
+  margin-top: 0.35rem;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   ROMANTIC & SWEET BIRTHDAY MESSAGE CARD
+   ========================================================================== */
+
+.wish-message-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.wish-card {
+  width: 100%;
+  max-width: 720px;
+  background: linear-gradient(145deg, rgba(20, 22, 44, 0.85), rgba(12, 14, 28, 0.9));
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: clamp(2.2rem, 5vw, 3.25rem);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  position: relative;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.wish-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), var(--rose-primary), transparent);
+}
+
+.wish-card:hover {
+  border-color: var(--border-gold-glow);
+  box-shadow: var(--shadow-glow);
+}
+
+.wish-card-badge {
+  display: inline-block;
+  font-family: var(--font-royal);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  background: rgba(255, 209, 102, 0.12);
+  padding: 0.35rem 1.1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 209, 102, 0.3);
+  margin-bottom: 1.1rem;
+  text-shadow: 0 0 10px rgba(255, 209, 102, 0.5);
+}
+
+.wish-card-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.5vw, 2.7rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.4rem;
+  text-shadow: 0 0 25px rgba(255, 209, 102, 0.4);
+}
+
+.wish-card-title span {
+  font-family: var(--font-royal);
+  color: var(--gold-bright);
+}
+
+.wish-text {
+  font-size: 1.1rem;
+  color: #e3e6f3;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+  font-weight: 300;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.wish-text em {
+  color: var(--gold-primary);
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+.wish-text strong {
+  color: var(--gold-bright);
+  font-weight: 600;
+}
+
+.wish-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 1.6rem 1.85rem;
+  max-width: 560px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 215, 120, 0.25);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.35), 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  font-size: 1.02rem;
+  color: #f7f7fa;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.check-icon {
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px rgba(255, 117, 143, 0.6));
+}
+
+.wish-signoff {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--rose-soft);
+  margin-top: 1.8rem;
+  line-height: 1.65;
+}
+
+.wish-signoff strong {
+  color: var(--gold-bright);
+  font-style: normal;
+  font-family: var(--font-royal);
+  letter-spacing: 0.06em;
+}
+
+/* Lightbox Modal for Polaroid */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.94);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox-overlay.open {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  animation: popIn 0.3s ease;
+}
+
+.lightbox-content img {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  border: 4px solid #fff;
+  box-shadow: 0 0 40px rgba(255, 209, 102, 0.4);
+}
+
+.lightbox-caption {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.75rem;
+  color: var(--gold-primary);
+  margin-top: 1rem;
+}
+
+/* Keyframe Animations */
+@keyframes popIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulseGold {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 183, 3, 0.5); }
+  50% { box-shadow: 0 0 28px rgba(255, 77, 109, 0.8); }
+}
+
+/* Responsive Queries */
+@media (max-width: 768px) {
+  .app-wrapper {
+    padding: 1.25rem 1rem 3.5rem;
+    gap: 2.5rem;
+  }
+  
+  .top-nav {
+    padding: 0.65rem 1.25rem;
+  }
+  
+  .brand-tag {
+    font-size: 1.2rem;
+  }
+
+  .wish-checklist {
+    padding: 1.2rem 1rem;
+  }
+}
